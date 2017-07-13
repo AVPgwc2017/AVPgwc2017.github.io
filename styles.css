@@ -1,12 +1,17 @@
 h1{
    font-family: 'Cinzel', serif;
-   style= color:navy;
+   style= color:blue;
 }
 p{
   font-family: 'Playfair Display', serif;
   style=color:black;
+  text-decoration: underline;
 }
 body{
   color: inherit;
   font-family: 'Open Sans', sans-serif;
+}
+h2{
+  text-align: center;
+  style=color:navy;
 }
