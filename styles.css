@@ -1,0 +1,12 @@
+h1{
+   font-family: 'Cinzel', serif;
+   style= color:navy;
+}
+p{
+  font-family: 'Playfair Display', serif;
+  style=color:black;
+}
+body{
+  color: inherit;
+  font-family: 'Open Sans', sans-serif;
+}
