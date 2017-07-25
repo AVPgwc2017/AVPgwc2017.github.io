@@ -1,0 +1,224 @@
+#include <Servo.h>
+Servo rightWheel;
+Servo leftWheel;
+
+int PIEZOPIN = 5; 
+  //Notes for Despacito
+int note_F4 = 349;
+int note_G4 = 392;
+int note_A4 = 440;
+int note_B4 = 494;
+int note_Cs5 = 554;
+int note_D5 = 587;
+int note_E5 = 659;
+
+int note_rest = -1;
+int note_srest = -0.5;
+
+// note lengths defined here
+long whole_note = 1600; //change tempo by changing durration of one measure
+long half_note = whole_note / 2;
+long quarter_note = whole_note / 4;
+long dottedquarter_note = whole_note / 3.5;
+long eighth_note = whole_note / 8;
+long dottedeighth_note = whole_note / 7.5;
+long sixthteenth_note = whole_note / 16;
+long triplet_note = whole_note / 8 - 2;
+
+long Despacito [119] [2] = {
+  //M1
+  {note_B4, quarter_note},
+  {note_rest / 2, quarter_note},
+  {note_F4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, triplet_note},
+  {note_E5, triplet_note},
+  {note_D5, triplet_note},
+  {note_Cs5, triplet_note},
+  {note_B4, triplet_note},
+  {note_A4, triplet_note},
+  // M2
+  {note_G4, dottedeighth_note},
+  {note_D5, dottedeighth_note},
+  {note_srest, quarter_note},
+  {note_rest, quarter_note},
+  //M3
+  {note_D5, eighth_note},
+  {note_A4, eighth_note},
+  {note_D5, eighth_note},
+  {note_A4, eighth_note},
+  {note_D5, eighth_note},
+  {note_A4, eighth_note},
+  {note_D5, eighth_note},
+  {note_E5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  //M4
+  {note_Cs5, quarter_note},
+  {note_rest, quarter_note},
+  {note_rest, quarter_note},
+  {note_rest, quarter_note},
+  //M5
+  {note_B4, quarter_note},
+  {note_rest / 2, quarter_note},
+  {note_F4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, triplet_note},
+  {note_E5, triplet_note},
+  {note_D5, triplet_note},
+  {note_Cs5, triplet_note},
+  {note_B4, triplet_note},
+  {note_A4, triplet_note},
+  //M6
+  {note_G4, dottedeighth_note},
+  {note_D5, dottedeighth_note},
+  {note_E5, eighth_note},
+  {note_D5, eighth_note},
+  {note_srest, quarter_note},
+  {note_rest, quarter_note},
+  //M7
+  {note_D5, eighth_note},
+  {note_A4, eighth_note},
+  {note_D5, eighth_note},
+  {note_A4, eighth_note},
+  {note_D5, eighth_note},
+  {note_A4, eighth_note},
+  {note_D5, eighth_note},
+  {note_E5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  //M8
+  {note_Cs5, quarter_note},
+  {note_rest, quarter_note},
+  {note_rest, quarter_note * 2},
+  //M9
+  {note_B4, quarter_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, eighth_note},
+  {note_Cs5, triplet_note},
+  {note_D5, triplet_note},
+  {note_Cs5, triplet_note},
+  //M10
+  {note_B4, quarter_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, eighth_note},
+  {note_Cs5, triplet_note},
+  {note_D5, triplet_note},
+  {note_E5, triplet_note},
+  //M11
+  {note_A4, quarter_note},
+  {note_A4, sixthteenth_note},
+  {note_A4, sixthteenth_note},
+  {note_A4, sixthteenth_note},
+  {note_A4, sixthteenth_note},
+  {note_D5, triplet_note},
+  {note_A4, triplet_note},
+  {note_D5, triplet_note},
+  {note_A4, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_E5, sixthteenth_note},
+  {note_E5, sixthteenth_note},
+  //M12
+  {note_E5, sixthteenth_note},
+  {note_Cs5, dottedeighth_note},
+  {note_Cs5, eighth_note},
+  {note_rest, quarter_note},
+  //M13
+  {note_B4, quarter_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_Cs5, triplet_note},
+  {note_D5, triplet_note},
+  {note_Cs5, triplet_note},
+  //M14
+  {note_B4, quarter_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_B4, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, eighth_note},
+  {note_E5, sixthteenth_note},
+  {note_A4, sixthteenth_note},
+  //M15
+  {note_A4, eighth_note},
+  {note_srest, quarter_note},
+  {note_A4, sixthteenth_note},
+  {note_A4, sixthteenth_note},
+  {note_A4, sixthteenth_note},
+  {note_A4, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, sixthteenth_note},
+  {note_Cs5, sixthteenth_note},
+  {note_D5, eighth_note},
+  {note_E5, sixthteenth_note},
+  {note_E5, sixthteenth_note},
+  {note_E5, sixthteenth_note},
+  {note_Cs5, dottedeighth_note},
+  {note_rest, quarter_note},
+  {note_D5, quarter_note},
+  {note_Cs5, quarter_note},
+
+
+};
+//void setup() {
+//rightWheel.attach(13);
+//leftWheel.attach(12);
+//
+//}
+//
+//void loop() {
+//rightWheel.writeMicroseconds(1700);
+//leftWheel.writeMicroseconds(1300);
+//
+//}
+
+// if you want there to be silence between notes,
+//   staccato should be true
+bool staccato = true;
+
+void setup() {
+  pinMode(PIEZOPIN, OUTPUT);
+}
+
+void loop() {
+  for(int i=0; i<34; i++){
+
+    int between = 0;
+    if(staccato){
+      between = 50;
+    }
+
+    // Play tone, or play silence (for rest)
+    if (Despacito[i][0] == note_rest) {
+      noTone(PIEZOPIN);
+    }
+    else {
+      tone(PIEZOPIN, Despacito[i][0]);
+    }
+    
+    delay(Despacito[i][1] - between);
+    noTone(PIEZOPIN);
+    delay(between);
+  }
+}
