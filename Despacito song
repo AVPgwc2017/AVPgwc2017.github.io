@@ -25,61 +25,62 @@ long dottedeighth_note = whole_note / 7.5;
 long sixthteenth_note = whole_note / 16;
 long triplet_note = whole_note / 8 - 2;
 
-long Despacito [119] [2] = {
-  //M1
-  {note_B4, quarter_note},
-  {note_rest / 2, quarter_note},
-  {note_F4, sixthteenth_note},
-  {note_B4, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, triplet_note},
-  {note_E5, triplet_note},
-  {note_D5, triplet_note},
-  {note_Cs5, triplet_note},
-  {note_B4, triplet_note},
-  {note_A4, triplet_note},
-  // M2
-  {note_G4, dottedeighth_note},
-  {note_D5, dottedeighth_note},
-  {note_srest, quarter_note},
-  {note_rest, quarter_note},
+  //D Major scale 4/4
+long Despacito [109] [4] = { //took 28 notes off the actual amount of notes
+//  //M1
+//  {note_B4, quarter_note},
+//  {note_rest / 2, quarter_note},
+//  {note_F4, sixthteenth_note},
+//  {note_B4, sixthteenth_note},
+//  {note_Cs5, sixthteenth_note},
+//  {note_D5, triplet_note},
+//  {note_E5, triplet_note},
+//  {note_D5, triplet_note},
+//  {note_Cs5, triplet_note},
+//  {note_B4, triplet_note},
+//  {note_A4, triplet_note},
+//  // M2
+//  {note_G4, dottedeighth_note},
+//  {note_D5, dottedeighth_note},
+//  {note_srest, quarter_note},
+//  {note_rest, quarter_note},
   //M3
-  {note_D5, eighth_note},
-  {note_A4, eighth_note},
-  {note_D5, eighth_note},
-  {note_A4, eighth_note},
-  {note_D5, eighth_note},
-  {note_A4, eighth_note},
-  {note_D5, eighth_note},
-  {note_E5, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  //M4
-  {note_Cs5, quarter_note},
-  {note_rest, quarter_note},
-  {note_rest, quarter_note},
-  {note_rest, quarter_note},
+//  {note_D5, eighth_note},
+//  {note_A4, eighth_note},
+//  {note_D5, eighth_note},
+//  {note_A4, eighth_note},
+//  {note_D5, eighth_note},
+//  {note_A4, eighth_note},
+//  {note_D5, eighth_note},
+//  {note_E5, sixthteenth_note},
+//  {note_Cs5, sixthteenth_note},
+//  //M4
+//  {note_Cs5, quarter_note},
+//  {note_rest, quarter_note},
+//  {note_rest, quarter_note},
+//  {note_rest, quarter_note},
   //M5
-  {note_B4, quarter_note},
-  {note_rest / 2, quarter_note},
-  {note_F4, sixthteenth_note},
-  {note_B4, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, triplet_note},
+  {note_B4, quarter_note, 1700, 1300},
+  {note_rest / 2, quarter_note, 1500, 1500},
+  {note_F4, sixthteenth_note,1700, 1300},
+  {note_B4, sixthteenth_note, 1300, 1500},
+  {note_Cs5, sixthteenth_note, 1700, 1300},
+  {note_D5, triplet_note, 1700, 1300},
   {note_E5, triplet_note},
   {note_D5, triplet_note},
   {note_Cs5, triplet_note},
   {note_B4, triplet_note},
   {note_A4, triplet_note},
   //M6
-  {note_G4, dottedeighth_note},
-  {note_D5, dottedeighth_note},
-  {note_E5, eighth_note},
-  {note_D5, eighth_note},
-  {note_srest, quarter_note},
-  {note_rest, quarter_note},
+  {note_G4, dottedeighth_note, 1700, 1300},
+  {note_D5, dottedeighth_note, 1700, 1300},
+  {note_E5, eighth_note, 1700, 1300},
+  {note_D5, eighth_note, 1700, 1300},
+  {note_srest, quarter_note, 1500, 1500},
+  {note_rest, quarter_note, 1500, 1500},
   //M7
-  {note_D5, eighth_note},
-  {note_A4, eighth_note},
+  {note_D5, eighth_note, 1700, 1300},
+  {note_A4, eighth_note, 1300, 1300},
   {note_D5, eighth_note},
   {note_A4, eighth_note},
   {note_D5, eighth_note},
@@ -89,10 +90,10 @@ long Despacito [119] [2] = {
   {note_Cs5, sixthteenth_note},
   //M8
   {note_Cs5, quarter_note},
-  {note_rest, quarter_note},
-  {note_rest, quarter_note * 2},
+  {note_rest, quarter_note, 1500, 1500},
+  {note_rest, quarter_note * 2, 1500, 1500},
   //M9
-  {note_B4, quarter_note},
+  {note_B4, quarter_note, 1700, 1500},
   {note_B4, sixthteenth_note},
   {note_B4, sixthteenth_note},
   {note_B4, sixthteenth_note},
@@ -105,49 +106,49 @@ long Despacito [119] [2] = {
   {note_Cs5, triplet_note},
   //M10
   {note_B4, quarter_note},
+  {note_B4, sixthteenth_note, 1700, 1500},
   {note_B4, sixthteenth_note},
   {note_B4, sixthteenth_note},
-  {note_B4, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, eighth_note},
-  {note_Cs5, triplet_note},
-  {note_D5, triplet_note},
-  {note_E5, triplet_note},
+  {note_Cs5, sixthteenth_note, 1300, 1700},
+  {note_D5, sixthteenth_note, 1700, 1300},
+  {note_Cs5, sixthteenth_note, 1300, 1700},
+  {note_D5, eighth_note, 1700, 1300},
+  {note_Cs5, triplet_note, 1300, 1700},
+  {note_D5, triplet_note, 1700, 1300},
+  {note_E5, triplet_note, 1500, 1700},
   //M11
   {note_A4, quarter_note},
   {note_A4, sixthteenth_note},
   {note_A4, sixthteenth_note},
   {note_A4, sixthteenth_note},
   {note_A4, sixthteenth_note},
-  {note_D5, triplet_note},
-  {note_A4, triplet_note},
-  {note_D5, triplet_note},
-  {note_A4, sixthteenth_note},
-  {note_D5, sixthteenth_note},
-  {note_E5, sixthteenth_note},
+  {note_D5, triplet_note, 1700, 1300},
+  {note_A4, triplet_note, 1300, 1700},
+  {note_D5, triplet_note, 1700, 1300},
+  {note_A4, sixthteenth_note, 1300, 1700},
+  {note_D5, sixthteenth_note, 1700, 1300},
+  {note_E5, sixthteenth_note, 1500, 1700},
   {note_E5, sixthteenth_note},
   //M12
   {note_E5, sixthteenth_note},
   {note_Cs5, dottedeighth_note},
   {note_Cs5, eighth_note},
-  {note_rest, quarter_note},
+  {note_rest, quarter_note, 1500, 1500},
   //M13
-  {note_B4, quarter_note},
+  {note_B4, quarter_note, 1500, 1700},
   {note_B4, sixthteenth_note},
   {note_B4, sixthteenth_note},
   {note_B4, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_Cs5, triplet_note},
-  {note_D5, triplet_note},
-  {note_Cs5, triplet_note},
+  {note_Cs5, sixthteenth_note, 1700, 1300},
+  {note_D5, sixthteenth_note, 1300, 1700},
+  {note_Cs5, sixthteenth_note, 1700, 1300},
+  {note_D5, sixthteenth_note, 1300, 1700},
+  {note_Cs5, sixthteenth_note, 1700, 1300},
+  {note_Cs5, triplet_note, 1700, 1300},
+  {note_D5, triplet_note, 1300, 1700},
+  {note_Cs5, triplet_note, 1700, 1300},
   //M14
-  {note_B4, quarter_note},
+  {note_B4, quarter_note, 1700, 1500},
   {note_B4, sixthteenth_note},
   {note_B4, sixthteenth_note},
   {note_B4, sixthteenth_note},
@@ -161,49 +162,42 @@ long Despacito [119] [2] = {
   {note_A4, sixthteenth_note},
   //M15
   {note_A4, eighth_note},
-  {note_srest, quarter_note},
+  {note_srest, quarter_note, 1500, 1500},
+  {note_A4, sixthteenth_note, 1300, 1500},
   {note_A4, sixthteenth_note},
   {note_A4, sixthteenth_note},
   {note_A4, sixthteenth_note},
-  {note_A4, sixthteenth_note},
-  {note_D5, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, sixthteenth_note},
-  {note_Cs5, sixthteenth_note},
-  {note_D5, eighth_note},
-  {note_E5, sixthteenth_note},
+  {note_D5, sixthteenth_note, 1700, 1300},
+  {note_Cs5, sixthteenth_note, 1300, 1700},
+  {note_D5, sixthteenth_note, 1700, 1300},
+  {note_Cs5, sixthteenth_note, 1300, 1700},
+  {note_D5, eighth_note, 1300, 1700},
+  {note_E5, sixthteenth_note, 1700, 1500},
   {note_E5, sixthteenth_note},
   {note_E5, sixthteenth_note},
   {note_Cs5, dottedeighth_note},
-  {note_rest, quarter_note},
+  {note_rest, quarter_note, 1500, 1500},
   {note_D5, quarter_note},
   {note_Cs5, quarter_note},
-
-
+ 
 };
-//void setup() {
-//rightWheel.attach(13);
-//leftWheel.attach(12);
-//
-//}
-//
-//void loop() {
-//rightWheel.writeMicroseconds(1700);
-//leftWheel.writeMicroseconds(1300);
-//
-//}
 
-// if you want there to be silence between notes,
-//   staccato should be true
+//if you want there to be silence between notes, 
+//staccato should be true
 bool staccato = true;
 
 void setup() {
   pinMode(PIEZOPIN, OUTPUT);
+  rightWheel.attach(13);
+  leftWheel.attach(12);
 }
 
 void loop() {
-  for(int i=0; i<34; i++){
-
+  for(int i=0; i<109; i++){
+  
+    rightWheel.writeMicroseconds(Despacito[i][2]);
+    leftWheel.writeMicroseconds(Despacito [i] [3]);
+ 
     int between = 0;
     if(staccato){
       between = 50;
@@ -211,7 +205,7 @@ void loop() {
 
     // Play tone, or play silence (for rest)
     if (Despacito[i][0] == note_rest) {
-      noTone(PIEZOPIN);
+      noTone(PIEZOPIN);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     }
     else {
       tone(PIEZOPIN, Despacito[i][0]);
@@ -222,3 +216,5 @@ void loop() {
     delay(between);
   }
 }
+
+  
