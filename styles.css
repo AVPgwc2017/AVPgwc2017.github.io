@@ -38,5 +38,6 @@ img{
 
 li{
   font-size: 20px;
-
+   list-style-image: none;
+   list-style-type: none;
 }
