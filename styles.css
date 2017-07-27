@@ -22,8 +22,6 @@ h2{
   font-family: 'Playfair Display', sans-serif;
   color:navy;
   text-decoration: underline;
-  margin-left: 600px;
-  margin-right: 600px;
   font-size: 30px;
 }
 
@@ -32,7 +30,7 @@ ul{
 
 }
 img{
-  image-orientation: center;
+  text-align: center;
   max-height: 300px
 }
 
