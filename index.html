@@ -23,18 +23,40 @@
 </div>
  <!-- activities -->
  <div>
+
    <body>
     <h2>Activities:<h2>
     <ul>
-    <li>Travel soccer</li>
-    <li>Varsity swim team</li>
-    <li>JV basketball</li>
-    <li>Varsity rugby</li>
-    <li>Golf</li>
-    <li>The Violin</li>
-    <li>Tap Dance</li>
+    <li id="travelSoccer">Travel soccer</li>
+    <li id= "swimming">Varsity swim team</li>
+    <li id="basketball">JV basketball</li>
+    <li id="rugby">Varsity rugby</li>
+    <li id="golf">Golf</li>
+    <li id="violin">The Violin</li>
+    <li id="tapDance">Tap Dance</li>
     </ul>
-
+<!-- What is shown when hovered -->
+    <div id="travelSoccerPic">
+      <img src="http://www.ryeyouthsoccer.org/uploads/5/5/9/6/55969281/8277087.jpg?322"/>
+    </div>
+    <div id= "swimmingPic">
+      <img src="http://www.clker.com/cliparts/3/8/e/e/12550949921588387948Olympic_sports_Swimming_pictogram.svg.hi.png"/>
+    </div>
+    <div id= "basketballPic">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/170px-Basketball.png"/>
+    </div>
+    <div id= "rugbyPic">
+      <img src="https://lh3.googleusercontent.com/1O5nyR1kA-pRaAkog4TycbaXWFAYW3_tCJ-sZS7IPNAogj6ToZex0qtYg7_f2_RGpaVbeYunArjTWAP7r5MrvygXjSgY2Px14UCxoXkV_rYEZUI_W9PqnLvQv72qUvPnxxJtELAALe-sAPZqAXwRUWIS-khmA58ExeWPYO3HLTbpWOeFT1pc-GXyml3qqBJIvj0Q_T6Wg80K3-WdeIWvdZfspSlcDTOOgsIZyod_Ji611YFsk-XJZRk70MKj1BmhUEm_QRO9o41K_uq94Is7SjMn0GsEeoLgKYT-GOpVdIIPGgN4G7EAiEiJA0j8f1gx7q4V5iZyl-G8YXBY6MLR2IZD5_nND8Te2pd8Bv5F7YQoaGECrfTuiY8UjxvGzQa6bOI5wgU3d9-YNgsks64sVMezOl102ddw-KDTK4Oulj7CKoFiJS7c_DcOHLxCIlA9_x-ZpFuBnR2W3BY0GWktc6fZyExCw9vMTFFtgLtlPum6WtGm6YLHaAPqk-dfQvcOhQPYje47O8WDuJfqNbH2Mp_pGbLBWd-eYlcN5n-Ec7M2SfNOziYFivFbYmfeZsF-wOzHB1OpCTUyFxxX8JlklvY15MRCwKAmOgzd27pJQ5c3CcpXwX42F6qe=w959-h663-no"/>
+    </div>
+    <div id= "golfPic">
+      <img src="http://www.fieldstforum.com/wp-content/uploads/2016/02/uga-golf.png"/>
+    </div>
+    <div id= "violinPic">
+      <img src="http://www.reddesertviolin.com/wp-content/uploads/2015/04/smallviolin.png"/>
+    </div>
+    <div id= "tapDancePic">
+      <img src="https://s-media-cache-ak0.pinimg.com/236x/64/01/87/640187743d54ecd1571636a445cc3605--fashion-silhouette-drawing-fashion.jpg"/>
+    </div>
   </body>
 </div>
 <!-- websites for code -->
@@ -45,7 +67,63 @@
      <li> <a href="https://github.com/AVPgwc2017/AVPgwc2017.github.io/blob/master/Despacito%20song"> Despacito Song for Arduino</a></li>
 
    </ul>
-
+<!-- Hover Code for activities -->
  </div>
+ <script type="text/javascript">
+   document.getElementById("travelSoccer").onmouseover = function(){
+     document.getElementById("travelSoccerPic").style.display = "block";
+   }
+   document.getElementById("travelSoccer").onmouseout = function(){
+     document.getElementById("travelSoccerPic").style.display = "none";
+   }
+ </script>
+ <script type="text/javascript">
+   document.getElementById("swimming").onmouseover = function(){
+     document.getElementById("swimmingPic").style.display = "block";
+   }
+   document.getElementById("swimming").onmouseout = function(){
+     document.getElementById("swimmingPic").style.display = "none";
+   }
+ </script>
+ <script type="text/javascript">
+   document.getElementById("basketball").onmouseover = function(){
+     document.getElementById("basketballPic").style.display = "block";
+   }
+   document.getElementById("basketball").onmouseout = function(){
+     document.getElementById("basketballPic").style.display = "none";
+   }
+</script>
+<script type="text/javascript">
+  document.getElementById("rugby").onmouseover = function(){
+    document.getElementById("rugbyPic").style.display = "block";
+  }
+  document.getElementById("rugby").onmouseout = function(){
+    document.getElementById("rugbyPic").style.display = "none";
+  }
+</script>
+<script type="text/javascript">
+  document.getElementById("golf").onmouseover = function(){
+    document.getElementById("golfPic").style.display = "block";
+  }
+  document.getElementById("golf").onmouseout = function(){
+    document.getElementById("golfPic").style.display = "none";
+  }
+</script>
+<script type="text/javascript">
+  document.getElementById("violin").onmouseover = function(){
+    document.getElementById("violinPic").style.display = "block";
+  }
+  document.getElementById("violin").onmouseout = function(){
+    document.getElementById("violinPic").style.display = "none";
+  }
+</script>
+<script type="text/javascript">
+  document.getElementById("tapDance").onmouseover = function(){
+    document.getElementById("tapDancePic").style.display = "block";
+  }
+  document.getElementById("tapDance").onmouseout = function(){
+    document.getElementById("tapDancePic").style.display = "none";
+  }
+</script>
   </body>
  </html>

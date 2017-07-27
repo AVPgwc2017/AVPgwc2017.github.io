@@ -39,3 +39,6 @@ li{
    list-style-image: none;
    list-style-type: none;
 }
+#travelSoccerPic {
+  display: none;
+}
