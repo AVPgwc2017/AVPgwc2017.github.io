@@ -5,21 +5,45 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Libre+Baskerville|Playfair+Display" rel="stylesheet">
           <link rel="stylesheet" type="text/css" href="styles.css">
+          <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<!--Changing backround code -->
+      <script>
+      $(document).ready(function(){
+      var header = $('body');
+
+      var backgrounds = new Array(
+          // 'url(http://www.wallpaperup.com/uploads/wallpapers/2014/04/12/330542/b0294ae380a0dce9c733edc990de8989.jpg)'
+        , 'url("https://scontent-iad3-1.xx.fbcdn.net/v/t31.0-8/17157422_1822505451407888_3082289181434311263_o.jpg?oh=3077d8b82b4a9bbbda9d0981c874d242&oe=59FF007A)'
+      );
+
+      var current = 0;
+
+      function nextBackground() {
+          current++;
+          current = current % backgrounds.length;
+          header.css('background-image', backgrounds[current]);
+      }
+      setInterval(nextBackground, 1000);
+
+      header.css('background-image', backgrounds[0]);
+      });
+      </script>
+      <!--Start of actual info on website  -->
    </head>
    <h1>Ashley Palermo</h1>
    <body>
  <div style="image-orientation-align:center">
    <body>
-     <img src="https://lh3.googleusercontent.com/-1qk3zY3gDMI/WXnm3Ez8ajI/AAAAAAAAAWw/R1KGABnYHK8WcpI5ZQDrRtsgc1kcXqMigCJoC/w663-h498-p/IMG_0335.JPG"/>
-
+     <img id= "profilepic" src="https://lh3.googleusercontent.com/-1qk3zY3gDMI/WXnm3Ez8ajI/AAAAAAAAAWw/R1KGABnYHK8WcpI5ZQDrRtsgc1kcXqMigCJoC/w663-h498-p/IMG_0335.JPG"/>
 </div>
  <!-- intro -->
 <div>
     <h2>About Me</h2>
     <p>I was raised in New York and currently attend Rye High School.</p>
     <p>I love Mint Chocolate Chip ice cream, the ocean, caramel macchiatos, and my family.</p>
-    <p>I strongly dislike mushrooms, peppers, bad attitudes, being late to things, and clowns. Although eveerybody has their days.</p>
+    <p>I strongly dislike mushrooms, peppers, bad attitudes, being late to things, and clowns.</p>
     <p> I love to code and hopefully I will have a degree in Computer Science, and Machanical Engineering.</p>
+      <img id= "family" src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/14184435_10208638985225559_6655825883165569820_n.jpg?oh=483dc788f0da6478f5c2382f40601b23&oe=59F56CD0"/>
 </div>
  <!-- activities -->
  <div>
@@ -40,7 +64,7 @@
       <img src="http://www.ryeyouthsoccer.org/uploads/5/5/9/6/55969281/8277087.jpg?322"/>
     </div>
     <div id= "swimmingPic">
-      <img src="http://www.clker.com/cliparts/3/8/e/e/12550949921588387948Olympic_sports_Swimming_pictogram.svg.hi.png"/>
+      <img src="https://i.groupme.com/1334x1000.jpeg.d6ef097ebaf346029e72440baa837ed9"/>
     </div>
     <div id= "basketballPic">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Basketball.png/170px-Basketball.png"/>
@@ -125,5 +149,9 @@
     document.getElementById("tapDancePic").style.display = "none";
   }
 </script>
+  </body>
+  <body>
+    <h3>Follow me on:</h3>
+    <a href="https://www.instagram.com/avap2019/">Instagram/>
   </body>
  </html>
